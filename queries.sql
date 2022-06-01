@@ -41,3 +41,15 @@ SELECT AVG(weight_kg) from animals;
 SELECT neutered, AVG(escape_attempts) from animals GROUP BY neutered ORDER BY AVG(escape_attempts);
 SELECT species, MIN(weight_kg), MAX(weight_kg) from animals GROUP BY species;
 SELECT species, AVG(escape_attempts) from animals WHERE date_of_birth BETWEEN '1990-01-01' and '2000-12-31' GROUP BY species;
+
+SELECT * FROM animals INNER JOIN owners ON owner_id = owners.id WHERE owner_id = 4;
+SELECT * FROM animals INNER JOIN species ON species_id = species.id WHERE species_id = 1;
+SELECT * FROM owners LEFT JOIN animals ON owners.id = animals.owner_id;
+SELECT COUNT(*) FROM (SELECT * FROM animals INNER JOIN species ON species_id = species.id) as animalsAndSpecies GROUP BY species_id;
+SELECT * FROM
+    (SELECT * FROM animals INNER JOIN species ON species_id = species.id) as animalsAndSpecies
+    INNER JOIN owners ON owner_id = owners.id
+    WHERE owner_id = 2 AND species_id = 2;
+SELECT * FROM animals INNER JOIN owners ON owner_id = owners.id WHERE owner_id = 5 AND escape_attempts = 0;
+SELECT owner_id, COUNT(*) FROM (SELECT * FROM animals INNER JOIN owners ON owner_id = owners.id) as animalsAndOwners
+    GROUP BY owner_id ORDER BY count desc;
