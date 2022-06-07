@@ -36,4 +36,6 @@ CREATE TABLE invoice_items {
   total_price DECIMAL,
   invoice_id INT,
   treatment_id INT,
+  FOREIGN KEY (invoice_id) REFERENCES invoices (id),
+  FOREIGN KEY (treatment_id) REFERENCES treatments (id)
 };
