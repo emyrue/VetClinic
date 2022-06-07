@@ -17,6 +17,13 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@EmyrueRobertson](https://twitter.com/EmyrueRobertson)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/emilyruthrobertson/)
 
+
+👤 **Author2**
+
+GitHub: @ivaan1992
+Twitter: @ivangaona92
+LinkedIn: LinkedIn
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
