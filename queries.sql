@@ -145,3 +145,7 @@ SELECT name, count FROM
     LIMIT 1) as maximum
     INNER JOIN species
     ON species.id = species_id;
+
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vet_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
